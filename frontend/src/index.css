@@ -1,0 +1,340 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* Layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  background-color: #fff;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+}
+
+.create {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 600px; /* Set a max width for the form */
+  margin: 40px auto; /* Center the form with automatic margins */
+  background-color: #fff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px; /* Slightly larger border-radius for better aesthetics */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle 3D effect */
+}
+
+/* New Workout Form */
+label,
+input,
+textarea {
+  display: block;
+  width: 100%; /* Ensure full width but adjust the size with padding */
+  font-size: 0.9rem; /* Slightly smaller font size for inputs */
+}
+
+input,
+textarea {
+  padding: 8px; /* Reduced padding */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+form button {
+  background-color: var(--primary);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; /* Make the button full-width */
+}
+
+div.error {
+  padding: 10px;
+  background-color: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error,
+textarea.error {
+  border: 1px solid var(--error);
+}
+
+.blogs{
+   margin: 20px;
+}
+
+
+@media screen and (max-width: 400px) {
+ ul.list{
+   display: block;
+ }
+}
+
+.list{
+  display: flex;
+  list-style: none;
+}
+.list li{
+  margin: 10px;
+}
+
+
+/* Container for each blog post */
+.box {
+  background: #fff;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Blog post title */
+.box h4 {
+  margin: 0 0 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Author and date text */
+.box p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Blog body */
+.box label {
+  font-weight: bold;
+  color: #555;
+}
+
+.box .Content {
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 0.9em;
+  color: #444;
+  resize: none;
+  box-sizing: border-box;
+}
+
+/* Delete button */
+.material-symbols-outlined {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #e7195a;
+  font-size: 1.2em;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.material-symbols-outlined:hover {
+  background-color: #e7195a;
+  color: #fff;
+}
+
+
+/* Navbar styles */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-list li {
+  margin: 0;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-list a:hover {
+  color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+
+  .navbar-list li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .menu-toggle:checked + .menu-icon + .navbar-list {
+    display: flex;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .box {
+    padding: 16px;
+    max-width: 95%;
+  }
+
+  .box h4 {
+    font-size: 1.3em;
+  }
+
+  .box .Content {
+    height: 120px;
+    font-size: 0.85em;
+  }
+
+  .material-symbols-outlined {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    padding: 14px;
+  }
+
+  .box h4 {
+    font-size: 1.2em;
+  }
+
+  .box p {
+    font-size: 0.85em;
+  }
+
+  .box .Content {
+    height: 100px;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 400px) {
+  .box {
+    padding: 12px;
+    margin: 10px auto;
+  }
+
+  .box h4 {
+    font-size: 1.1em;
+  }
+
+  .box p {
+    font-size: 0.8em;
+  }
+
+  .box .Content {
+    height: 80px;
+    font-size: 0.75em;
+  }
+
+  .material-symbols-outlined {
+    top: 12px;
+    right: 12px;
+    font-size: 1em;
+  }
+}
+
+
+
